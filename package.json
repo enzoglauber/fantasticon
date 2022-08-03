@@ -1,0 +1,20 @@
+{
+  "scripts": {
+    "start": "node scripts/iconfont.mjs"
+  },
+  "name": "fantasticon-generator",
+  "version": "1.0.0",
+  "description": "Node Icon Font Generator",
+  "main": "index.js",
+  "repository": "https://github.com/enzoglauber/fantasticon.git",
+  "author": "enzojob@gmail.com",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "fantasticon": "^1.2.3",
+    "fs": "0.0.1-security"
+  },
+  "devDependencies": {
+    "fs-extra": "^9.1.0"
+  }
+}
