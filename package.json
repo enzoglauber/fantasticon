@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "start": "node scripts/iconfont.mjs"
+    "start": "node scripts/start.mjs"
   },
   "name": "fantasticon-generator",
   "version": "1.0.0",
