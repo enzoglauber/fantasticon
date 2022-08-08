@@ -16,5 +16,12 @@
   },
   "devDependencies": {
     "fs-extra": "^9.1.0"
+  },
+  "files": [
+    "dist",
+    "icons"
+  ],
+  "engines": {
+    "node": ">= 10.0.0"
   }
 }

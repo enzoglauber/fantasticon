@@ -20,7 +20,7 @@ const move = () => {
     fs.move(`${dist}${name}.eot`, `${dist}fonts/${name}.eot`, options),
     fs.move(`${dist}${name}.woff`, `${dist}fonts/${name}.woff`, options),
     fs.move(`${dist}${name}.woff2`, `${dist}fonts/${name}.woff2`, options),
-    // fs.move(`${dist}${name}.svg`, `${dist}fonts/${name}.svg`, options)
+    fs.move(`${dist}${name}.svg`, `${dist}fonts/${name}.svg`, options)
   ]);
 }
 
@@ -32,7 +32,12 @@ const directories = () => {
 const fonts = () => {
   return generateFonts({
     name,
-    fontTypes: [FontAssetType.EOT, FontAssetType.WOFF2, FontAssetType.WOFF],
+    fontTypes: [
+      FontAssetType.EOT,
+      FontAssetType.WOFF2,
+      FontAssetType.WOFF,
+      FontAssetType.SVG
+    ],
     assetTypes: [
       OtherAssetType.SCSS,
       OtherAssetType.CSS,
@@ -45,17 +50,8 @@ const fonts = () => {
         indent: 2
       }
     },
-    fontsUrl: `./fonts`,
-    // pathOptions: {
-    //   eot: `${base_path}/${name}.eot`
-    // },
-    codepoints: {},
-    //fontHeight: 300,
-    round: undefined,
-    descent: undefined,
-    normalize: undefined,
-    selector: null,
     tag: 'i',
+    fontsUrl: `./fonts`,
     prefix: 'icon',
     inputDir: `${icons}`,
     outputDir: `${dist}`,
